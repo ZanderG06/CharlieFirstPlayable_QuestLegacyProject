@@ -13,10 +13,24 @@ namespace CharlieDobson_FirstPlayable_Programming2
 
         string[] questList = { "Collect 300 total gold", "Buy something at the shop", "Complete the game" };
         bool[] questsCompleted = { false, false, false };
+        int xOffset;
+        int yOffset = 15;
+
+        public void DisplayQuests()
+        {
+            xOffset = GameManager.Instance._gameMap._mapWidth + 10;
+
+            for (int i = 0; i < questList.Length; i++)
+            {
+                Console.SetCursorPosition(xOffset, yOffset + i);
+                Console.WriteLine($"Quest {i + 1}: {questList[i]}"); //+1 to account for 0 index
+            }
+        }
 
         public void QuestCompleted(int questIndex)
         {
             questsCompleted[questIndex] = true;
+            questList[questIndex] = $"Quest {questIndex + 1}: Completed!";
         }
     }
 }

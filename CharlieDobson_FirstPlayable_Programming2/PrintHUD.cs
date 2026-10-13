@@ -37,8 +37,7 @@ namespace CharlieDobson_FirstPlayable_Programming2
                 Console.Write(enemyHudLines[i]);
             }
 
-
-
+            GameManager.Instance.quests.DisplayQuests();
         }
 
         public Enemy FindClosestEnemy(Player target)
