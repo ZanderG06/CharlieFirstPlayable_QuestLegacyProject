@@ -19,7 +19,7 @@ namespace CharlieDobson_FirstPlayable_Programming2
             Console.SetWindowSize(width, height);
             Console.SetBufferSize(width, height);
 
-            Console.WriteLine("Before we begin, I have the window set to a speficic size for a reason.\nIf you resize it, and you break it, its on you.");
+            Console.WriteLine("Before we begin, Charlie has the window set to a specific size 'for a reason'.\n'If you resize it, and you break it, its on you.' - Charlie\nPress any button to continue");
             Console.ReadKey(true);
             Console.Clear();
 
@@ -67,7 +67,7 @@ namespace CharlieDobson_FirstPlayable_Programming2
 
         public static void Tutorial()
         {
-            Console.WriteLine("Use WSAD to control the * around.");
+            Console.WriteLine("Use WASD to control the * around.");
             Console.WriteLine("Collect gold from $ collectables or from enemies dying.");
             Console.WriteLine("Kill a certain amount of enemies(the red guys) to progress");
             Console.WriteLine("Tiles with a + will heal you.");
@@ -78,9 +78,9 @@ namespace CharlieDobson_FirstPlayable_Programming2
         public static void StartMenu()
         {
             Console.WriteLine("~~~~~~~~~");
-            Console.WriteLine("HIT A TO PLAY ADVENTURE MODE!");
+            Console.WriteLine("HIT A TO PLAY ADVENTURE MODE! (Quests)");
             Console.WriteLine();
-            Console.WriteLine("HIT E TO PLAY ENDLESS MODE!");
+            Console.WriteLine("HIT E TO PLAY ENDLESS MODE! ('I didn't touch Endless Mode' - Zander)");
             Console.WriteLine("~~~~~~~~~");
         }
       

@@ -17,6 +17,7 @@ namespace CharlieDobson_FirstPlayable_Programming2
         public EndlessMode endless = new EndlessMode();
         public AdventureMode adventure = new AdventureMode();
         public Spawner spawner = new Spawner();
+        public Quests quests = new Quests();
 
         public int _currentTurn = 0;
         public List<Enemy> _enemies = new List<Enemy>();

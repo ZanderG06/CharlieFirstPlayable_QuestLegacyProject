@@ -51,6 +51,7 @@ namespace CharlieDobson_FirstPlayable_Programming2
         public void GetGold(int amount)
         {
             _goldAmount = _goldAmount + amount * _goldMultipler;
+            GameManager.Instance.quests.totalGoldCollected += amount * _goldMultipler;
         }
 
         public override void Movement()

@@ -25,7 +25,7 @@ namespace CharlieDobson_FirstPlayable_Programming2
         public void Adventure()
         {
             GameManager.Instance.totalEnemiesBoundary = 10;
-            Console.WriteLine($"Have {GameManager.Instance.totalEnemiesBoundary} enemies die to progress");
+            Console.WriteLine($"Have {GameManager.Instance.totalEnemiesBoundary} enemies die to progress\nPress any button to continue");
 
             Console.ReadKey(true);
             Console.Clear();
