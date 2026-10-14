@@ -10,8 +10,8 @@ namespace CharlieDobson_FirstPlayable_Programming2
     internal class Quests
     {
         public int totalGoldCollected = 0;
-
-        string[] questList = { "Collect 300 total gold", "Buy something at the shop", "Complete the game" };
+        public string[] questList = { "Collect 300 total gold", "Buy something at the shop", "Complete the game" };
+        
         bool[] questsCompleted = { false, false, false };
         int xOffset;
         int yOffset = 15;
@@ -30,7 +30,22 @@ namespace CharlieDobson_FirstPlayable_Programming2
         public void QuestCompleted(int questIndex)
         {
             questsCompleted[questIndex] = true;
-            questList[questIndex] = $"Quest {questIndex + 1}: Completed!";
+            questList[questIndex] = $"Quest {questIndex + 1}: Completed!                        ";
+        }
+
+        public int AmountOfQuestsCompleted()
+        {
+            int completedCount = 0;
+
+            for (int i = 0; i < questsCompleted.Length; i++)
+            {
+                if(questsCompleted[i] == true)
+                {
+                    completedCount++;
+                }
+            }
+
+            return completedCount;
         }
     }
 }

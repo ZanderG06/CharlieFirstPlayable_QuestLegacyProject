@@ -45,12 +45,16 @@ namespace CharlieDobson_FirstPlayable_Programming2
             if (GameManager.Instance._isDead == true)
             {
                 Console.WriteLine("You have met an end to your journey, come back when you have proven yourself stronger.");
+                Console.WriteLine($"You completed {GameManager.Instance.quests.AmountOfQuestsCompleted()}/{GameManager.Instance.quests.questList.Length} quests.");
 
                 Console.ReadKey(true);
             }
             else
             {
+                GameManager.Instance.quests.QuestCompleted(2);
                 Console.WriteLine("Congrats, you have mindlessly played a game until it is over.");
+                Console.WriteLine($"You completed {GameManager.Instance.quests.AmountOfQuestsCompleted()}/{GameManager.Instance.quests.questList.Length} quests.");
+
                 Console.ReadKey(true);
             }
             

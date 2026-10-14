@@ -57,6 +57,7 @@ namespace CharlieDobson_FirstPlayable_Programming2
                         GameManager.Instance._gamePlayer._goldAmount -= _item1Cost;
                         GameManager.Instance._gamePlayer._health.MaxHealthIncrease(5);
                         Console.Write("You bought item 1.");
+                        GameManager.Instance.quests.QuestCompleted(1);
                         _item1Cost += 10;
                     }
                     else
@@ -71,6 +72,7 @@ namespace CharlieDobson_FirstPlayable_Programming2
                         GameManager.Instance._gamePlayer._goldAmount -= _item2Cost;
                         GameManager.Instance._gamePlayer._attackMultipler = GameManager.Instance._gamePlayer._attackMultipler + 1;
                         Console.Write("You bought item 2.");
+                        GameManager.Instance.quests.QuestCompleted(1);
                         _item1Cost += 20;
                     }
                     else
@@ -85,6 +87,7 @@ namespace CharlieDobson_FirstPlayable_Programming2
                         GameManager.Instance._gamePlayer._goldAmount -= _item3Cost;
                         GameManager.Instance._gamePlayer._goldMultipler = GameManager.Instance._gamePlayer._goldMultipler + 1;
                         Console.Write("You bought item 3.");
+                        GameManager.Instance.quests.QuestCompleted(1);
                         _item1Cost += 30;
                     }
                     else
