@@ -30,7 +30,7 @@ namespace CharlieDobson_FirstPlayable_Programming2
         public void QuestCompleted(int questIndex)
         {
             questsCompleted[questIndex] = true;
-            questList[questIndex] = $"Quest {questIndex + 1}: Completed!                        ";
+            questList[questIndex] = "Completed!                        ";
         }
 
         public int AmountOfQuestsCompleted()
