@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 //My script for the Legacy Project - Zander
 namespace CharlieDobson_FirstPlayable_Programming2
@@ -10,13 +6,13 @@ namespace CharlieDobson_FirstPlayable_Programming2
     internal class Quests
     {
         public int totalGoldCollected = 0;
-        public string[] questList = { "Collect 300 total gold", "Buy something at the shop", "Complete the game" };
+        public string[] questList = { "Collect 100 total gold", "Buy something at the shop", "Complete the game" };
         
         bool[] questsCompleted = { false, false, false };
         int xOffset;
         int yOffset = 15;
 
-        public void DisplayQuests()
+        public void DisplayQuests()//Call after displaying HUD
         {
             xOffset = GameManager.Instance._gameMap._mapWidth + 10;
 
@@ -27,22 +23,19 @@ namespace CharlieDobson_FirstPlayable_Programming2
             }
         }
 
-        public void QuestCompleted(int questIndex)
+        public void QuestCompleted(int questIndex)//Call when conditions met
         {
             questsCompleted[questIndex] = true;
             questList[questIndex] = "Completed!                        ";
         }
 
-        public int AmountOfQuestsCompleted()
+        public int AmountOfQuestsCompleted()//Use for Game Over Screen
         {
             int completedCount = 0;
 
             for (int i = 0; i < questsCompleted.Length; i++)
             {
-                if(questsCompleted[i] == true)
-                {
-                    completedCount++;
-                }
+                if(questsCompleted[i] == true) completedCount++;
             }
 
             return completedCount;

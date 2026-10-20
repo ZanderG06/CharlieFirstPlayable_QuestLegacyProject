@@ -53,7 +53,7 @@ namespace CharlieDobson_FirstPlayable_Programming2
             _goldAmount = _goldAmount + amount * _goldMultipler;
             GameManager.Instance.quests.totalGoldCollected += amount * _goldMultipler;
 
-            if(GameManager.Instance.quests.totalGoldCollected >= 300)
+            if(GameManager.Instance.quests.totalGoldCollected >= 100)
             {
                 GameManager.Instance.quests.QuestCompleted(0);
             }
